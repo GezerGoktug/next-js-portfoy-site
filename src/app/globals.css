@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .bg-skew {
+    @apply after:-skew-y-3 after:w-full after:h-full after:absolute after:left-0 after:top-0 relative after:p-6 p-4 after:-z-[2] after:content-[''];
+  }
+}
+@layer utilities {
+  /*? FLEX-BOX HELPER UTİLİTY CLASSES  */
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-start {
+    @apply flex justify-start items-center;
+  }
+  .flex-end {
+    @apply flex justify-end items-center;
+  }
+  .row-center {
+    @apply flex  items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+  .flex-around {
+    @apply flex justify-around items-center;
+  }
+  .col-center {
+    @apply flex flex-col  items-center;
+  }
+  .col-reverse-center {
+    @apply flex flex-col-reverse  items-center;
+  }
+  .col-start {
+    @apply flex  flex-col items-start;
+  }
+  .col-end {
+    @apply flex  flex-col items-end;
+  }
+  /*? TEXT GRADİENT HELPER UTİLİTY CLASSES  */
+  .text-gradient-b {
+    @apply bg-gradient-to-b text-transparent bg-clip-text;
+  }
+  .text-gradient-r {
+    @apply bg-gradient-to-r text-transparent bg-clip-text;
+  }
+  .text-gradient-br {
+    @apply bg-gradient-to-br text-transparent bg-clip-text;
+  }
+}
